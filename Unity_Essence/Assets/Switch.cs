@@ -36,7 +36,7 @@ public class Switch : NetworkBehaviour
 
     public override void OnNetworkDespawn()
     {
-        if (!IsServer) { return; }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

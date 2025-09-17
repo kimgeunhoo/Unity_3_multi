@@ -11,22 +11,26 @@ public class SwitchedDoor : NetworkBehaviour
         );
 
     public GameObject physicsObject;
+    Animator animator;
+    const string DoorOpenName = "isOpen";
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
 
     public override void OnNetworkSpawn()
     {
         if (IsServer)
         {
-            
+            animator.SetBool(DoorOpenName, IsOpen.Value); // NetCode NetworkVariable 서버에 참여했을때 바로적용
         }
         IsOpen.OnValueChanged += OnDoorChange;
     }
 
     public override void OnNetworkDespawn()
     {
-        if (IsServer)
-        {
-            
-        }
         IsOpen.OnValueChanged -= OnDoorChange;
     }
 
@@ -34,7 +38,7 @@ public class SwitchedDoor : NetworkBehaviour
     {
         if(IsServer)
         {
-            //animator.SetBool("isTrigger", IsDoorOpen);
+            animator.SetBool(DoorOpenName, IsDoorOpen);
         }
 
         if(IsClient)
