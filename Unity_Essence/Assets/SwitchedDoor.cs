@@ -12,7 +12,7 @@ public class SwitchedDoor : NetworkBehaviour
 
     public GameObject physicsObject;
     Animator animator;
-    const string DoorOpenName = "isOpen";
+    const string DoorOpenName = "IsOpen";
 
     private void Awake()
     {

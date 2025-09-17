@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 823768041084846872}
   - component: {fileID: 1722766791442622111}
   - component: {fileID: 1563510655838503749}
-  - component: {fileID: -5053360635893620350}
+  - component: {fileID: 8277271507483394043}
   m_Layer: 0
   m_Name: ProjectileBase
   m_TagString: Untagged
@@ -147,14 +147,14 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.99999994, y: 1.9999999}
   m_Direction: 0
---- !u!114 &-5053360635893620350
+--- !u!114 &8277271507483394043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,4 +166,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74d1f36a83c2bd24988661c8c66caba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3
+  time: 1
