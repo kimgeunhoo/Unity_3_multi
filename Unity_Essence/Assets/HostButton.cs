@@ -13,8 +13,23 @@ public class HostButton : NetworkBehaviour
     private void Awake()
     {
         button = GetComponent<Button>();
-    }  
+    }
 
-    
+    public override void OnNetworkSpawn()
+    {
+        if(IsHost) // Host 일때만 버튼 활성화
+        {
+            button.gameObject.SetActive(true);
+        }
+        else
+        {
+            button.gameObject.SetActive(false);
+        }
+    }
+
+    public override void OnNetworkDespawn()
+    {
+
+    }
 
 }
