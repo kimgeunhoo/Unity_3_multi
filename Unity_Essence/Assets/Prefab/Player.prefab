@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2245412209686550718}
   - component: {fileID: 932491730960819584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LauncherTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5650188461786460126}
   - component: {fileID: 2613122319799297058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Launcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 2355375596428751428}
   - component: {fileID: 6383228704379573674}
   - component: {fileID: 8021279495541994298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
