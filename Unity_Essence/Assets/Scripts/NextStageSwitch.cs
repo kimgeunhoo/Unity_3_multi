@@ -57,6 +57,8 @@ public class NextStageSwitch : NetworkBehaviour
 
     private void FixedUpdate() // 물리적 계산을 처리할 때 호출하면 좋다. TriggerEvent 발생 후에 실행 보장
     {
+        if(!IsServer) { return; }
+
         if (!IsSpawned) { return; }
         triggerColliders.RemoveAll(col => col == null); // 예외처리, null인 상태로 저장이되면 그 null 삭제
 

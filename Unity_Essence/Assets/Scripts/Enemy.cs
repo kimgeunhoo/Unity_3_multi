@@ -17,14 +17,15 @@ public class Enemy : NetworkBehaviour
     {
         if (!IsServer) { return; }
 
-
+        health.OnDie -= HandleEnemyDie;
     }
 
-    private void HandleEnemyDie(Health health)
+    protected virtual void HandleEnemyDie(Health health)
     {
         // 죽엇을 때 이펙트
         // 죽엇을 때 사운드
 
-        Destroy(gameObject);
+        Bus<IEnemyDeathEvent>.Raise(new IEnemyDeathEvent(this));
+        NetworkManager.Destroy(gameObject); //Scene에서 없애라
     }
 }
